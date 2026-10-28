@@ -1,0 +1,60 @@
+{
+  "evaluated_utc": "2026-10-28T18:19:42.202836+00:00",
+  "selected_model": "boost_d3_lr0.05_l20",
+  "selected_baseline": "zero",
+  "metrics": [
+    {
+      "model": "boost_d3_lr0.05_l20",
+      "rows": 121981,
+      "tracks": 214,
+      "balanced_mse": 0.08458527644547618,
+      "balanced_rmse": 0.29083548003205556,
+      "balanced_mae": 0.1677949253189321,
+      "frame_mse": 0.07972848959946321,
+      "frame_rmse": 0.2823623374309386,
+      "frame_mae": 0.1616556582138976,
+      "tp": 1614,
+      "fp": 5,
+      "fn": 5187,
+      "tn": 115175,
+      "precision": 0.9969116738727609,
+      "recall": 0.2373180414644905,
+      "fpr": 4.341031429067546e-05,
+      "prevalence": 0.055754584730408834
+    },
+    {
+      "model": "zero",
+      "rows": 121981,
+      "tracks": 214,
+      "balanced_mse": 2.0068060513164627,
+      "balanced_rmse": 1.416617821191186,
+      "balanced_mae": 0.9114488233084617,
+      "frame_mse": 1.9386095401075945,
+      "frame_rmse": 1.3923395922358863,
+      "frame_mae": 0.8847084055385674,
+      "tp": 0,
+      "fp": 0,
+      "fn": 6801,
+      "tn": 115180,
+      "precision": null,
+      "recall": 0.0,
+      "fpr": 0.0,
+      "prevalence": 0.055754584730408834
+    }
+  ],
+  "paired_balanced_mse_difference": -1.922220774870986,
+  "trajectory_bootstrap_interval_95": [
+    -1.9866141021695023,
+    -1.8624426377321068
+  ],
+  "bootstrap_draws": 2000,
+  "seed": 20261028,
+  "test_rows_per_model": 121981,
+  "test_tracks": 214,
+  "limitations": [
+    "Processed reference shares provenance with speed; no independent braking labels",
+    "Convenience cohort; one test road; trajectories may share traffic conditions",
+    "Bootstrap conditional on this road and sample, not population-wide uncertainty",
+    "Validation FPR constraint is not guaranteed on the test road"
+  ]
+}

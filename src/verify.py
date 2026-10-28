@@ -42,9 +42,9 @@ def evaluate(path):
             'frame_mae':math.fsum(v[2] for v in groups.values())/count[model]}
     return answer,by_model,identities
 
-def confusion(export,thresholds):
+def confusion(export,thresholds,cached=None):
     counts={name:dict(tp=0,fp=0,fn=0,tn=0) for name in thresholds}
-    for row in rows(export):
+    for row in rows(export) if cached is None else cached:
         name=row['model']
         if name not in thresholds: continue
         actual=float(row['reference'])<=-2.4384
@@ -106,12 +106,13 @@ def main(phase):
     frozen=selection['alert_thresholds']
     # Recompute every threshold, then independently apply the selection ordering.
     threshold_rows=list(rows(R/'threshold_search.csv'))
+    cached=[r for r in rows(R/'validation_predictions.csv.gz') if r['model'] in frozen]
     for name in frozen:
         subset=[r for r in threshold_rows if r['model']==name];expected=[]
         # One pass per threshold is deliberate independence from the vectorized implementation.
         for row in subset:
             threshold=float(row['threshold_mps2']) if row['threshold_mps2'] else None
-            recalculated=confusion(R/'validation_predictions.csv.gz',{name:threshold})[name]
+            recalculated=confusion(R/'validation_predictions.csv.gz',{name:threshold},cached)[name]
             for k,v in recalculated.items():
                 if v is not None: close(row[k],v)
                 else: assert row[k]==''
