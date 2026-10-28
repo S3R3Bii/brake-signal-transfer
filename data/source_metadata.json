@@ -1,0 +1,136 @@
+{
+  "name": "Next Generation Simulation (NGSIM) Vehicle Trajectories and Supporting Data",
+  "description": "Click \u201cExport\u201d on the right to download the vehicle trajectory data. The associated metadata and additional data can be downloaded below under \"Attachments\".\n\nResearchers for the Next Generation Simulation (NGSIM)  program collected detailed vehicle trajectory data on southbound US 101 and Lankershim Boulevard in Los Angeles, CA, eastbound I-80 in Emeryville, CA and Peachtree Street in Atlanta, Georgia. Data was collected through a network of synchronized digital video cameras. NGVIDEO, a customized software application developed for the NGSIM program, transcribed the vehicle trajectory data from the video. This vehicle trajectory data provided the precise location of each vehicle within the study area every one-tenth of a second, resulting in detailed lane positions and locations relative to other vehicles. Click the \"Show More\" button below to find additional contextual data and metadata for this dataset. \n\nFor site-specific NGSIM video file datasets, please see the following:\n- <a href=\"https://data.transportation.gov/Automobiles/Next-Generation-Simulation-NGSIM-Program-I-80-Vide/2577-gpny\">NGSIM I-80 Videos</a>\n- <a href=\"https://data.transportation.gov/Automobiles/Next-Generation-Simulation-NGSIM-Program-US-101-Vi/4qzi-thur\">NGSIM US-101 Videos</a>\n- <a href=\"https://data.transportation.gov/Automobiles/Next-Generation-Simulation-NGSIM-Program-Lankershi/uv3e-y54k\">NGSIM Lankershim Boulevard Videos</a>\n- <a href=\"https://data.transportation.gov/Automobiles/Next-Generation-Simulation-NGSIM-Program-Peachtree/mupt-aksf\">NGSIM Peachtree Street Videos</a>",
+  "license": {
+    "name": "Creative Commons Attribution | Share Alike 3.0 Unported",
+    "logoUrl": "images/licenses/cc30bysa.png",
+    "termsLink": "http://creativecommons.org/licenses/by-sa/3.0/legalcode"
+  },
+  "columns": [
+    {
+      "fieldName": "vehicle_id",
+      "dataTypeName": "number",
+      "description": "Vehicle identification number (ascending by time of entry into section). REPEATS ARE NOT ASSOCIATED. "
+    },
+    {
+      "fieldName": "frame_id",
+      "dataTypeName": "number",
+      "description": " Frame Identification number (ascending by start time)"
+    },
+    {
+      "fieldName": "total_frames",
+      "dataTypeName": "number",
+      "description": " Total number of frames in which the vehicle appears in this data set"
+    },
+    {
+      "fieldName": "global_time",
+      "dataTypeName": "number",
+      "description": "Elapsed time in milliseconds since Jan 1, 1970."
+    },
+    {
+      "fieldName": "local_x",
+      "dataTypeName": "number",
+      "description": "Lateral (X) coordinate of the front center of the vehicle in feet with respect to\nthe left-most edge of the section in the direction of travel."
+    },
+    {
+      "fieldName": "local_y",
+      "dataTypeName": "number",
+      "description": "Longitudinal (Y) coordinate of the front center of the vehicle in feet with\nrespect to the entry edge of the section in the direction of travel."
+    },
+    {
+      "fieldName": "global_x",
+      "dataTypeName": "number",
+      "description": "X Coordinate of the front center of the vehicle in feet based on CA State\nPlane III in NAD83.\nAttribute Domain Val"
+    },
+    {
+      "fieldName": "global_y",
+      "dataTypeName": "number",
+      "description": "Y Coordinate of the front center of the vehicle in feet based on CA State\nPlane III in NAD83."
+    },
+    {
+      "fieldName": "v_length",
+      "dataTypeName": "number",
+      "description": "Length of vehicle in feet"
+    },
+    {
+      "fieldName": "v_width",
+      "dataTypeName": "number",
+      "description": "Width of vehicle in feet"
+    },
+    {
+      "fieldName": "v_class",
+      "dataTypeName": "number",
+      "description": "Vehicle type: 1 - motorcycle, 2 - auto, 3 - truck "
+    },
+    {
+      "fieldName": "v_vel",
+      "dataTypeName": "number",
+      "description": "Instantaneous velocity of vehicle in feet/second."
+    },
+    {
+      "fieldName": "v_acc",
+      "dataTypeName": "number",
+      "description": "Instantaneous acceleration of vehicle in feet/second square."
+    },
+    {
+      "fieldName": "lane_id",
+      "dataTypeName": "number",
+      "description": "Current lane position of vehicle. Lane 1 is farthest left lane; lane 5 is farthest\nright lane. Lane 6 is the auxiliary lane between Ventura Boulevard on-ramp and the Cahuenga\nBoulevard off-ramp. Lane 7 is the on-ramp at Ventura Boulevard, and Lane 8 is the off-ramp at\nCahuenga Boulevard."
+    },
+    {
+      "fieldName": "o_zone",
+      "dataTypeName": "text",
+      "description": "Origin zones of the vehicles, i.e., the place where the vehicles enter the\ntracking system. There are 11 origins in the study area, numbered from 101 through 111. Please\nrefer to the data analysis report for more detailed information."
+    },
+    {
+      "fieldName": "d_zone",
+      "dataTypeName": "text",
+      "description": "Destination zones of the vehicles, i.e., the place where the vehicles exit the\ntracking system. There are 10 destinations in the study area, numbered from 201 through 211.\nOrigin 102 is a one-way off-ramp; hence there is no associated destination number 202. Please\nrefer to the data analysis report for more detailed information."
+    },
+    {
+      "fieldName": "int_id",
+      "dataTypeName": "text",
+      "description": "Intersection in which the vehicle is traveling. Intersections are numbered\nfrom 1 to 4, with intersection 1 at the southernmost, and intersection 4 at the northernmost\nsection of the study area. Value of \u201c0\u201d means that the vehicle was not in the immediate vicinity of\nan intersection and that the vehicle instead identifies with a section of Lankershim Boulevard\n(Section_ID, below). Please refer to the data analysis report for more detailed information.\n"
+    },
+    {
+      "fieldName": "section_id",
+      "dataTypeName": "text",
+      "description": "Section in which the vehicle is traveling. Lankershim Blvd is divided into five\nsections (south of intersection 1; between intersections 1 and 2, 2 and 3, 3 and 4; and north of\nintersection 4). Value of \u201c0\u201d means that the vehicle does not identify with a section of Lankershim\nBoulevard and that the vehicle was in the immediate vicinity of an intersection (Int_ID above).\nPlease refer to the data analysis report for more detailed information"
+    },
+    {
+      "fieldName": "direction",
+      "dataTypeName": "text",
+      "description": " Moving direction of the vehicle. 1 - east-bound (EB), 2 - north-bound (NB), 3 -\nwest-bound (WB), 4 - south-bound (SB).\n"
+    },
+    {
+      "fieldName": "movement",
+      "dataTypeName": "text",
+      "description": "Movement of the vehicle. 1 - through (TH), 2 - left-turn (LT), 3 - right-turn\n(RT)."
+    },
+    {
+      "fieldName": "preceding",
+      "dataTypeName": "number",
+      "description": "Vehicle ID of the lead vehicle in the same lane. A value of '0' represents no\npreceding vehicle - occurs at the end of the study section and off-ramp due to the fact that only\ncomplete trajectories were recorded by this data collection effort (vehicles already in the section\nat the start of the study period were not recorded)."
+    },
+    {
+      "fieldName": "following",
+      "dataTypeName": "number",
+      "description": "Vehicle ID of the vehicle following the subject vehicle in the same lane. A\nvalue of '0' represents no following vehicle - occurs at the beginning of the study section and onramp\ndue to the fact that only complete trajectories were recorded by this data collection effort\n(vehicle that did not traverse the downstream boundaries of the section by the end of the study\nperiod were not recorded)."
+    },
+    {
+      "fieldName": "space_headway",
+      "dataTypeName": "number",
+      "description": "Space Headway in feet. Spacing provides the distance between the frontcenter\nof a vehicle to the front-center of the preceding vehicle."
+    },
+    {
+      "fieldName": "time_headway",
+      "dataTypeName": "number",
+      "description": "Time Headway in seconds. Time Headway provides the time to travel from\nthe front-center of a vehicle (at the speed of the vehicle) to the front-center of the preceding\nvehicle. A headway value of 99"
+    },
+    {
+      "fieldName": "location",
+      "dataTypeName": "text",
+      "description": "Name of street or freeway "
+    }
+  ]
+}

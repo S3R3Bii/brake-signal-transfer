@@ -1,0 +1,20 @@
+[
+  {
+    "location": "i-80",
+    "source_count": 81147,
+    "downloaded_rows": 81147,
+    "count_url": "https://data.transportation.gov/resource/8ect-6jqj.json?%24select=count%28%2A%29+AS+n&%24where=location%3D%27i-80%27+AND+vehicle_id+BETWEEN+1+AND+80"
+  },
+  {
+    "location": "lankershim",
+    "source_count": 40876,
+    "downloaded_rows": 40876,
+    "count_url": "https://data.transportation.gov/resource/8ect-6jqj.json?%24select=count%28%2A%29+AS+n&%24where=location%3D%27lankershim%27+AND+vehicle_id+BETWEEN+1+AND+80"
+  },
+  {
+    "location": "us-101",
+    "source_count": 124121,
+    "downloaded_rows": 124121,
+    "count_url": "https://data.transportation.gov/resource/8ect-6jqj.json?%24select=count%28%2A%29+AS+n&%24where=location%3D%27us-101%27+AND+vehicle_id+BETWEEN+1+AND+80"
+  }
+]
