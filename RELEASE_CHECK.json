@@ -1,0 +1,51 @@
+{
+  "timestamp_utc": "2026-10-28T18:33:48.616847+00:00",
+  "status": "PASS_WITH_STATED_LIMITATIONS",
+  "data_source_rows": 246144,
+  "candidate_count": 18,
+  "regression_tests_passed": 5,
+  "independent_source_and_metric_checks": "PASS",
+  "offline_replay": "PASS: refit, selection, test metrics and figures",
+  "privacy": {
+    "files_scanned": 48,
+    "flagged_files": [],
+    "scope": "All tracked text and decompressed prediction files; excluded manuscript/key files; figures manually inspected; no universal security guarantee"
+  },
+  "visual_check": "All three quantitative figures inspected; labels and units reviewed",
+  "gates": {
+    "source_rights": "PASS",
+    "numeric_reproduction": "PASS",
+    "past_feature_lineage": "PASS",
+    "road_split_disjointness": "PASS",
+    "private_manuscript_exclusion": "PASS"
+  },
+  "limits": [
+    "NGSIM acceleration is a processed reference sharing provenance with speed, not independent sensor truth",
+    "Past-only local feature generation does not establish upstream real-time causality",
+    "Finite grid with one validation road is not global optimality",
+    "No claim of population generalization, production safety or novel algorithm"
+  ],
+  "evidence_sha256": {
+    "results/corrections/scores_before_variance_fix.csv": "a9db6e6ed66958526cd66767ebf15ee77d69e0b25a9d214aadc3f10ace272fec",
+    "results/corrections/selection_before_variance_fix.json": "311f3ab468182a838db9939e0adec1b11e767127dba8bb7229be3643fccebb53",
+    "results/corrections/variance_check_failure.json": "583d9c0d421b134f4e0cf7c2d6fbd783db089d1d075a56d6205e9e95c40571db",
+    "results/data_quality.json": "cdad301557f69c2d0554e5abb42a927787d207c2e5364276c06af122355b95ea",
+    "results/paired_track_mse.csv": "a53ab21990f935e3b25f0726c131accd1ed20165a0378a16fc1781b472be58b1",
+    "results/selection.json": "4022389e2cad784bb59a6ccdbc17de81339d6e4c35984a7dfd8130b050511187",
+    "results/speed_subgroups.csv": "3c877222f0db63255fed78f4f74c7f47f893d55f60ef004a6fb150013ec08033",
+    "results/test_metrics.csv": "d01711a5f736a90383c46dc7b4fb39e7edb93ba2b7b52dac1731955f0dadef16",
+    "results/test_summary.json": "a4a1ab99c0ca9115c6c147d0a8ad8fb05deddda9752b961bad46b7e81ebab7a4",
+    "results/test_verification.json": "d65ba72ae81a151cd97421b1951efb890419e3ea66694b5e00d3d2be12cfd49d",
+    "results/threshold_search.csv": "8f1fae081b870061a043fefa586031f6d7fa931fbfcbc338fe910e55037d2394",
+    "results/validation_scores.csv": "d1507abde0d762d2d2efb2dc0565c925cb57a81778974c9d3ea76a928c82b684",
+    "results/validation_verification.json": "77412338d6ae840ee9b916fd9033b328b57b7a835b56443ced5610b257f6b663",
+    "results/vehicle_subgroups.csv": "fcb4f3138c32bd31d827a46430c16294773fe760741e7165f9c0090c05d14489",
+    "src/analyze.py": "9efcc0ab93ff261d53553475c8ca9192fa9afd964f5874b6b0c10750155920cf",
+    "src/check_reproduction.py": "6027555241799783520b0f5d1a66d9c4ed7f5fedbf0016d065efe98f81ffc4a9",
+    "src/figures.py": "d6b46c2b8f1673d5eb8cb98b7e0a2b565f29262dace8b9f6dfa745101231c94b",
+    "src/prepare.py": "3087312b80dd08bc7f45edb8e85fba3e005b3e4463124d4647beb5b301fa3761",
+    "src/retrieve.py": "c49fe8000fe7313625aee0945bdb244e3fe2fc6e487e11ae5513fb0cb436377e",
+    "src/verify.py": "2f3a78e88f3fe0c52bc76fd5889ee80febafac562239c251073d0efe74bada6c",
+    "tests/test_data_contract.py": "b987ceee28677373c7d897fe639d2e11ed0c9c3ccf537f22938a9b8b4527c2ed"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "phase": "test",
+  "checks": [
+    "Six source-page hashes and 246144 rows reconcile",
+    "Every causal feature independently joined to source timestamps, frames and units",
+    "18 candidate metrics, model selection and all alert thresholds independently reproduced",
+    "Training, validation and test road/trajectory identifiers are disjoint",
+    "Frozen test metrics, confusion counts and paired trajectory interval independently reproduced"
+  ],
+  "limits": "Numerical and lineage checks do not establish independent sensor ground truth or road-population generalization."
+}
