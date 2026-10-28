@@ -1,5 +1,7 @@
 # Deceleration estimation across road environments
 
+[Research manuscript: PDF and LaTeX](paper/README.md)
+
 Can a speed-based model reconstruct acceleration on a different road while retaining enough braking coverage to be useful? This reproducible study uses 246,144 historical public NGSIM trajectory records, SQL feature lineage and a separated train/validation/test design.
 
 **Finding:** the selected model's held-out-road trajectory-balanced RMSE was **0.291 m/s²**, versus **1.417 m/s²** for the validation-selected zero-acceleration baseline. But the frozen low-false-alert threshold detected only **23.7% of reference-positive frames**. Better reconstruction error is insufficient evidence for a useful safety detector. The next step is independent sensor labels and event-level evaluation on new routes, not deployment.
@@ -61,4 +63,4 @@ A cancellation error in rolling variance was caught by independent recomputation
 
 This is independent, AI-assisted research, not a production deployment, peer-reviewed publication or claim of a new algorithm. Historical processed trajectories, a small convenience cohort, one validation road and one test road limit transfer claims. No fine-tuning of a pretrained model was performed. Related work already documents substantial NGSIM measurement and reconstruction problems: [Montanino and Punzo (2013)](https://journals.sagepub.com/doi/10.3141/2390-11) and [Coifman and Li (2017)](https://ceg.osu.edu/sites/default/files/2022-06/Coifman_and_Li_2017.pdf).
 
-[FHWA/DOT source and reuse details](SOURCES.md) include the source's CC BY-SA 3.0 license and exact queries. Dataset attribution is retained; no broader rights are asserted. Manuscript drafts remain private and outside Git history. See the [model validation standard](MODEL_VALIDATION_STANDARD.md) for future tuning and release requirements.
+[FHWA/DOT source and reuse details](SOURCES.md) include the source's CC BY-SA 3.0 license and exact queries. Dataset attribution is retained; no broader rights are asserted. The independent research manuscript is available in [PDF and LaTeX](paper/README.md); it has not been peer reviewed. See the [model validation standard](MODEL_VALIDATION_STANDARD.md) for future tuning and release requirements.

@@ -9,3 +9,6 @@ __pycache__/
 *.out
 private/
 manuscript*/
+
+# Explicitly approved independent research source.
+!paper/main.tex
