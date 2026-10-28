@@ -1,0 +1,8 @@
+{
+  "status": "FAILED_INITIAL_CHECK",
+  "check": "Independent past-only standard deviation",
+  "actual": 1.1920928955078125e-07,
+  "expected": 0.0,
+  "cause": "Cancellation in E[x squared] minus E[x] squared at constant speed",
+  "repair": "Centered 10-sample windows; protocol, split and search space unchanged; test not evaluated"
+}

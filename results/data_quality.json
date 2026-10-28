@@ -1,0 +1,38 @@
+[
+  {
+    "location": "i-80",
+    "raw": 81147,
+    "exact_duplicate_rows_removed": 0,
+    "invalid_rows_removed": 0,
+    "conflicting_rows_removed": 0,
+    "clean_rows": 81147,
+    "segments_before_history_filter": 91,
+    "history_rows_removed": 910,
+    "analysis_rows": 80237,
+    "analysis_tracks": 91
+  },
+  {
+    "location": "lankershim",
+    "raw": 40876,
+    "exact_duplicate_rows_removed": 0,
+    "invalid_rows_removed": 0,
+    "conflicting_rows_removed": 0,
+    "clean_rows": 40876,
+    "segments_before_history_filter": 72,
+    "history_rows_removed": 720,
+    "analysis_rows": 40156,
+    "analysis_tracks": 72
+  },
+  {
+    "location": "us-101",
+    "raw": 124121,
+    "exact_duplicate_rows_removed": 0,
+    "invalid_rows_removed": 0,
+    "conflicting_rows_removed": 0,
+    "clean_rows": 124121,
+    "segments_before_history_filter": 214,
+    "history_rows_removed": 2140,
+    "analysis_rows": 121981,
+    "analysis_tracks": 214
+  }
+]

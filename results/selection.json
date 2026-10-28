@@ -1,0 +1,135 @@
+{
+  "frozen_utc": "2026-10-28T18:16:07.628232+00:00",
+  "selected_model": "boost_d3_lr0.05_l20",
+  "selected_baseline": "zero",
+  "alert_thresholds": {
+    "boost_d3_lr0.05_l20": -3.2004,
+    "zero": -3.6576000000000004
+  },
+  "objective": "Validation mean of per-trajectory MSE; lower is better; model name tie break",
+  "train_site": "i-80",
+  "validation_site": "lankershim",
+  "test_site": "us-101",
+  "test_outcomes_used_for_selection": false,
+  "candidate_count": 18,
+  "seed": 20261028,
+  "candidates": [
+    {
+      "name": "zero",
+      "kind": "baseline"
+    },
+    {
+      "name": "diff1",
+      "kind": "baseline"
+    },
+    {
+      "name": "diff3",
+      "kind": "baseline"
+    },
+    {
+      "name": "diff5",
+      "kind": "baseline"
+    },
+    {
+      "name": "diff10",
+      "kind": "baseline"
+    },
+    {
+      "name": "ridge_0.01",
+      "kind": "ridge",
+      "alpha": 0.01
+    },
+    {
+      "name": "ridge_0.1",
+      "kind": "ridge",
+      "alpha": 0.1
+    },
+    {
+      "name": "ridge_1",
+      "kind": "ridge",
+      "alpha": 1
+    },
+    {
+      "name": "ridge_10",
+      "kind": "ridge",
+      "alpha": 10
+    },
+    {
+      "name": "ridge_100",
+      "kind": "ridge",
+      "alpha": 100
+    },
+    {
+      "name": "boost_d2_lr0.05_l20",
+      "kind": "boost",
+      "max_depth": 2,
+      "learning_rate": 0.05,
+      "l2_regularization": 0
+    },
+    {
+      "name": "boost_d2_lr0.05_l21",
+      "kind": "boost",
+      "max_depth": 2,
+      "learning_rate": 0.05,
+      "l2_regularization": 1
+    },
+    {
+      "name": "boost_d2_lr0.1_l20",
+      "kind": "boost",
+      "max_depth": 2,
+      "learning_rate": 0.1,
+      "l2_regularization": 0
+    },
+    {
+      "name": "boost_d2_lr0.1_l21",
+      "kind": "boost",
+      "max_depth": 2,
+      "learning_rate": 0.1,
+      "l2_regularization": 1
+    },
+    {
+      "name": "boost_d3_lr0.05_l20",
+      "kind": "boost",
+      "max_depth": 3,
+      "learning_rate": 0.05,
+      "l2_regularization": 0
+    },
+    {
+      "name": "boost_d3_lr0.05_l21",
+      "kind": "boost",
+      "max_depth": 3,
+      "learning_rate": 0.05,
+      "l2_regularization": 1
+    },
+    {
+      "name": "boost_d3_lr0.1_l20",
+      "kind": "boost",
+      "max_depth": 3,
+      "learning_rate": 0.1,
+      "l2_regularization": 0
+    },
+    {
+      "name": "boost_d3_lr0.1_l21",
+      "kind": "boost",
+      "max_depth": 3,
+      "learning_rate": 0.1,
+      "l2_regularization": 1
+    }
+  ],
+  "boost_fixed": {
+    "max_iter": 100,
+    "min_samples_leaf": 30,
+    "early_stopping": false
+  },
+  "features": [
+    "speed",
+    "diff1",
+    "diff3",
+    "diff5",
+    "diff10",
+    "past_mean",
+    "past_sd"
+  ],
+  "target": "Recorded acceleration converted to m/s\u00b2; processed proxy, not sensor ground truth",
+  "scope": "Finite grid, not a global optimum; one validation road only"
+}

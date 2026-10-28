@@ -40,6 +40,12 @@ def build():
              'clean_rows':len(clean),'segments_before_history_filter':clean.track.nunique()})
         cleaned.append(clean)
     clean=pd.concat(cleaned,ignore_index=True)
+    # Center each short window before squaring to avoid cancellation at constant speed.
+    clean['stable_sd']=np.nan
+    for _,segment in clean.groupby('track',sort=False):
+        if len(segment)>10:
+            windows=np.lib.stride_tricks.sliding_window_view(segment.speed.to_numpy(),10)[:-1]
+            clean.loc[segment.index[10:],'stable_sd']=windows.std(axis=1)
     db=sqlite3.connect(':memory:')
     clean[['location','vehicle_id','frame_id','global_time','v_class','track','speed','reference']].to_sql('frames',db,index=False)
     db.execute('CREATE UNIQUE INDEX unique_frame ON frames(location,vehicle_id,global_time)')
@@ -53,7 +59,9 @@ def build():
     (ROOT/'sql').mkdir(exist_ok=True)
     (ROOT/'sql/features.sql').write_text(query,encoding='utf-8')
     features=pd.read_sql_query(query,db)
-    features['past_sd']=np.sqrt(np.maximum(0,features.past_mean_square-features.past_mean**2))
+    features=features.merge(clean[['location','vehicle_id','global_time','stable_sd']],
+        on=['location','vehicle_id','global_time'],how='left',validate='one_to_one')
+    features['past_sd']=features.pop('stable_sd')
     for k in [1,3,5,10]:
         assert (features.global_time-features[f'time_lag{k}']==100*k).all()
         features[f'diff{k}']=(features.speed-features[f'speed_lag{k}'])/(.1*k)
